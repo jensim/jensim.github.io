@@ -1,0 +1,15 @@
+branches:
+  only:
+    - build
+
+language: node_js
+node_js: "11"
+
+install: true
+
+script: ".travis/build.sh"
+
+deploy:
+  provider: script
+  script: ".travis/deploy.sh"
+  skip_cleanup: true
