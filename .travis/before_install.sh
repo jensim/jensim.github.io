@@ -10,3 +10,5 @@ openssl aes-256-cbc -K $1 -iv $2 -in .travis/github_deploy_key.enc -out .travis/
 chmod 600 .travis/github_deploy_key
 eval $(ssh-agent -s)
 ssh-add .travis/github_deploy_key
+
+git submodule update --init --recursive

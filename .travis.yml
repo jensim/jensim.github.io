@@ -2,6 +2,9 @@ branches:
   only:
   - build
 
+git:
+  submodules: false
+
 language: node_js
 node_js: '11'
 
