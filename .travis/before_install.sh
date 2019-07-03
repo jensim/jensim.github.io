@@ -12,3 +12,6 @@ eval $(ssh-agent -s)
 ssh-add .travis/github_deploy_key
 
 git submodule update --init --recursive
+cd dist/jensim
+git checkout master
+rm -rf *
