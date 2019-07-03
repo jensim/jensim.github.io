@@ -1,9 +1,11 @@
 branches:
   only:
-    - build
+  - build
 
 language: node_js
-node_js: "11"
+node_js: '11'
+
+before_install: ".travis/before_install.sh $encrypted_cb753b59ae60_key $encrypted_cb753b59ae60_iv"
 
 install: true
 
