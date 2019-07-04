@@ -16,7 +16,7 @@ script: ".travis/build.sh"
 
 deploy:
   provider: script
-  script: ".travis/deploy.sh"
+  script: ".travis/deploy.sh $encrypted_cb753b59ae60_key $encrypted_cb753b59ae60_iv"
   skip_cleanup: true
   on:
     branch: build
