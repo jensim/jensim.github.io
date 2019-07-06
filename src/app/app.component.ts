@@ -10,8 +10,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       state('default', style({transform: 'rotate(0)'})),
       state('rotated', style({transform: 'rotate(-355deg)'})),
       transition('rotated => default', animate('400ms ease-out')),
-      transition('default => rotated', animate('400ms ease-in'))
-    ])
+      transition('default => rotated', animate('400ms ease-in')),
+    ]),
   ],
 })
 export class AppComponent {

@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/theming';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
 @include mat-core();
 
 body {
@@ -19,6 +17,11 @@ body {
 }
 
 a {
-  color: $dark-primary-text;
   text-decoration: none;
+}
+
+@import 'my-theme.scss';
+
+.my-theme {
+  @include angular-material-theme($my-theme);
 }
