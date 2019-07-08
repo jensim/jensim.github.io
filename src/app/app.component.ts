@@ -16,7 +16,6 @@ import {ActivatedRoute} from '@angular/router';
   ],
 })
 export class AppComponent {
-  title = 'Jensim';
   opened = true;
   page: string = null;
 
