@@ -1,25 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<span class="fa fa-bars jensim-menu-button jensim-nav-icon" (click)="sidenav.toggle()" [@rotatedState]="opened ? 'rotated' : 'default'"></span>
+<a mat-button class="jensim-menu-button" (click)="sidenav.toggle()" [@rotatedState]="opened ? 'rotated' : 'default'">
+  <img alt="Menu button" src="../assets/svg/bars.svg" width="24" height="24">
+</a>
 <mat-sidenav-container class="jensim-sidenav-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="menu-top-padding mat-background-accent">
-    <div>
-      <a href="#">
-        <img width="27" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-        Home
-      </a>
-    </div>
-    <div>
-      <a href="https://www.linkedin.com/in/jens-brimfors-85950051/" target="_blank">
-        <i class="fa fa-linkedin jensim-nav-icon"></i> LinkedIn
-      </a>
-    </div>
-    <div>
-      <a href="https://github.com/jensim/" target="_blank">
-        <i class="fa fa-github jensim-nav-icon"></i> GitHub
-      </a>
-    </div>
+    <app-menu></app-menu>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-home></app-home>
+    <ng-container [ngSwitch]="true">
+      <app-home *ngSwitchCase="['home',null].includes(page)"></app-home>
+      <app-java *ngIf="page == 'java'"></app-java>
+      <app-unknown *ngSwitchDefault></app-unknown>
+    </ng-container>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -6,21 +6,21 @@
   right: 0;
 }
 
-.jensim-nav-icon {
-  font-size: 2em;
-}
-
 mat-sidenav-content {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-.jensim-menu-button {
-  color: midnightblue;
+a.jensim-menu-button {
   position: absolute;
   top: 2mm;
   left: 2mm;
   z-index: 999;
+}
+
+.fa {
+  font-size: 2em;
+  color: white;
 }
 
 .menu-top-padding {

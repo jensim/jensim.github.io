@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +18,9 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class AppComponent {
   title = 'Jensim';
   opened = true;
+  page: string = null;
+
+  constructor(route: ActivatedRoute) {
+    route.fragment.subscribe((f) => this.page = f);
+  }
 }

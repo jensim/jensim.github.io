@@ -8,15 +8,20 @@ import {HomeComponent} from './pages/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {MenuComponent} from './pages/menu/menu.component';
+import {JavaComponent} from './pages/java/java.component';
+import {UnknownComponent} from './pages/unknown/unknown.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    MenuComponent,
+    JavaComponent,
+    UnknownComponent,
   ],
   imports: [
-    AngularFontAwesomeModule,
     BrowserModule,
     MaterialModule,
     FormsModule,
@@ -26,6 +31,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]
