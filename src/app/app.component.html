@@ -9,7 +9,7 @@
   <mat-sidenav-content>
     <ng-container [ngSwitch]="true">
       <app-home *ngSwitchCase="['home',null].includes(page)"></app-home>
-      <app-java *ngIf="page == 'java'"></app-java>
+      <app-java *ngSwitchCase="page == 'java'"></app-java>
       <app-unknown *ngSwitchDefault></app-unknown>
     </ng-container>
   </mat-sidenav-content>

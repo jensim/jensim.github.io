@@ -20,6 +20,6 @@ export class AppComponent {
   page: string = null;
 
   constructor(route: ActivatedRoute) {
-    route.fragment.subscribe((f) => this.page = f);
+    route.fragment.subscribe((f) => this.page = f.toLowerCase());
   }
 }
