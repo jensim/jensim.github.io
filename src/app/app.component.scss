@@ -1,9 +1,9 @@
 .jensim-sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
 }
 
 mat-sidenav-content {
@@ -11,18 +11,8 @@ mat-sidenav-content {
   padding-right: 1em;
 }
 
-a.jensim-menu-button {
-  position: absolute;
-  top: 2mm;
-  left: 2mm;
-  z-index: 999;
-}
-
 .fa {
   font-size: 2em;
   color: white;
 }
 
-.menu-top-padding {
-  padding: 12mm 3px 3px;
-}

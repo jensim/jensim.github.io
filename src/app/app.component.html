@@ -1,7 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<a mat-button class="jensim-menu-button" (click)="sidenav.toggle()" [@rotatedState]="opened ? 'rotated' : 'default'">
-  <img alt="Menu button" src="../assets/svg/bars.svg" width="24" height="24">
-</a>
+<mat-toolbar>
+  <a mat-button (click)="sidenav.toggle()" [@rotatedState]="opened ? 'rotated' : 'default'">
+    <img alt="Menu button" src="../assets/svg/bars.svg" width="24" height="24">
+  </a>
+</mat-toolbar>
 <mat-sidenav-container class="jensim-sidenav-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="menu-top-padding mat-background-accent">
     <app-menu></app-menu>
