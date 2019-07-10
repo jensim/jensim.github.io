@@ -8,9 +8,9 @@
     <app-menu></app-menu>
   </mat-sidenav>
   <mat-sidenav-content>
-    <ng-container [ngSwitch]="true">
-      <app-home *ngSwitchCase="['home',null].includes(page)"></app-home>
-      <app-java *ngSwitchCase="page == 'java'"></app-java>
+    <ng-container [ngSwitch]="page">
+      <app-home *ngSwitchCase="'home'"></app-home>
+      <app-java *ngSwitchCase="'java'"></app-java>
       <app-unknown *ngSwitchDefault></app-unknown>
     </ng-container>
   </mat-sidenav-content>

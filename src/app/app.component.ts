@@ -23,6 +23,8 @@ export class AppComponent {
     route.fragment.subscribe((f) => {
       if (f !== undefined && f != null && typeof f === 'string') {
         this.page = f.toLowerCase();
+      }else{
+        this.page = 'home';
       }
     });
   }
