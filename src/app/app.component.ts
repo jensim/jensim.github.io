@@ -21,7 +21,7 @@ export class AppComponent {
 
   constructor(route: ActivatedRoute) {
     route.fragment.subscribe((f) => {
-      if (f != null) {
+      if (f !== undefined && f != null && typeof f === 'string') {
         this.page = f.toLowerCase();
       }
     });
