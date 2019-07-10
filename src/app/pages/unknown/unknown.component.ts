@@ -14,7 +14,6 @@ export class UnknownComponent implements OnInit {
     setInterval(() => {
       this.showPolygons();
     }, 2500);
-
   }
 
   private showPolygons() {
@@ -28,5 +27,4 @@ export class UnknownComponent implements OnInit {
       }, Math.random() * 2000);
     }
   }
-
 }
