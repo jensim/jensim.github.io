@@ -89,9 +89,13 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/core
+
 @angular/material/datepicker
 
 @angular/material/dialog
+
+@angular/material/list
 
 @angular/material/sidenav
 
