@@ -1,17 +1,53 @@
-<mat-toolbar>
-  <a mat-button (click)="sidenav.toggle()" [@rotatedState]="opened ? 'rotated' : 'default'">
-    <img alt="Menu button" src="../assets/svg/bars.svg" width="24" height="24">
-  </a>
-</mat-toolbar>
-<mat-sidenav-container class="jensim-sidenav-container" >
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="menu-top-padding mat-background-accent">
-    <app-menu></app-menu>
+<mat-sidenav-container class="all-wrap">
+  <mat-sidenav #sidenav over>
+    <mat-list>
+        <mat-list-item>
+          <a mat-stroked-button href="#home" (click)="sidenav.close()">
+            <img alt="Angular Logo" src="../../assets/svg/brands/angular.svg" width="24" height="24">
+            Home
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-stroked-button href="#java" (click)="sidenav.close()">
+            <img alt="Java Logo" src="../../assets/svg/brands/java.svg" width="24" height="24">
+            Java, Kotlin, etc
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-stroked-button href=" https://www.linkedin.com/in/jens-brimfors-85950051/" target="_blank">
+            <img alt="LinkedIn Logo" src="../../assets/svg/brands/linkedin.svg" width="24" height="24">
+            LinkedIn
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-stroked-button href="https://github.com/jensim/" target="_blank">
+            <img alt="GitHub Logo" src="../../assets/svg/brands/github-square.svg" width="24" height="24">
+            GitHub
+          </a>
+        </mat-list-item>
+    </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <ng-container [ngSwitch]="page">
+
+  <mat-sidenav-content class="page-wrap">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.open()">
+          <img alt="Menu button" src="../assets/svg/bars.svg" width="24">
+        </button>
+        <span><h1>Jens Brimfors</h1></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div [ngSwitch]="page" class="main">
       <app-home *ngSwitchCase="'home'"></app-home>
       <app-java *ngSwitchCase="'java'"></app-java>
       <app-unknown *ngSwitchDefault></app-unknown>
-    </ng-container>
+    </div>
+
+    <footer>
+      <img alt="Last page release"
+           class="right"
+           src="https://img.shields.io/github/last-commit/jensim/jensim.github.io/master.svg?label=Last%20release%20of%20this%20site&logo=github&style=for-the-badge">
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

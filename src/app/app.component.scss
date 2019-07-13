@@ -1,14 +1,13 @@
-.jensim-sidenav-container {
-  position: fixed;
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
-  min-width: 100%;
+.all-wrap {
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-mat-sidenav-content {
-  padding-left: 1em;
-  padding-right: 1em;
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .fa {
@@ -16,3 +15,20 @@ mat-sidenav-content {
   color: white;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1; // child will set to an equal size inside the container
+
+  * {
+    flex: 1;
+    display: block;
+
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+footer {
+  text-align: right;
+}

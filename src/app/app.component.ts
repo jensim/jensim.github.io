@@ -18,12 +18,15 @@ import {ActivatedRoute} from '@angular/router';
 export class AppComponent {
   opened = true;
   page: string = null;
+  menuLinks = [
+    {name: 'Home'}
+  ];
 
   constructor(route: ActivatedRoute) {
     route.fragment.subscribe((f) => {
       if (f !== undefined && f != null && typeof f === 'string') {
         this.page = f.toLowerCase();
-      }else{
+      } else {
         this.page = 'home';
       }
     });

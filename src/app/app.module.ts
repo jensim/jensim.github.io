@@ -8,7 +8,6 @@ import {HomeComponent} from './pages/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MenuComponent} from './pages/menu/menu.component';
 import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
 import {RouterModule} from '@angular/router';
@@ -17,7 +16,6 @@ import {RouterModule} from '@angular/router';
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent,
     JavaComponent,
     UnknownComponent,
   ],

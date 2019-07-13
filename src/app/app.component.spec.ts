@@ -3,7 +3,6 @@ import {AppComponent} from './app.component';
 import {MaterialModule} from './modules/material-module/material.module';
 import {HomeComponent} from './pages/home/home.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MenuComponent} from './pages/menu/menu.component';
 import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
 import {ActivatedRoute} from '@angular/router';
@@ -15,7 +14,6 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         HomeComponent,
-        MenuComponent,
         JavaComponent,
         UnknownComponent,
       ],
