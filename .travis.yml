@@ -8,7 +8,7 @@ git:
 language: node_js
 node_js: '11'
 
-before_install: ".travis/before_install.sh $encrypted_cb753b59ae60_key $encrypted_cb753b59ae60_iv"
+before_install: ".travis/before_install.sh $encrypted_f217180e22ee_key $encrypted_f217180e22ee_iv"
 
 install: true
 
@@ -16,7 +16,7 @@ script: ".travis/build.sh"
 
 deploy:
   provider: script
-  script: ".travis/deploy.sh $encrypted_cb753b59ae60_key $encrypted_cb753b59ae60_iv"
+  script: ".travis/deploy.sh $encrypted_f217180e22ee_key $encrypted_f217180e22ee_iv"
   skip_cleanup: true
   on:
     branch: build
