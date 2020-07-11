@@ -6,7 +6,7 @@ import {MaterialModule} from './modules/material-module/material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HomeComponent} from './pages/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MatNativeDateModule} from '@angular/material';
+// import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
@@ -29,7 +29,6 @@ import { RustComponent } from './pages/rust/rust.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatNativeDateModule,
     ReactiveFormsModule,
     RouterModule.forRoot([]),
   ],
