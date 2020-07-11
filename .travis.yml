@@ -6,7 +6,7 @@ git:
   submodules: false
 
 language: node_js
-node_js: '11'
+node_js: '14'
 
 before_install: ".travis/before_install.sh $encrypted_f217180e22ee_key $encrypted_f217180e22ee_iv"
 
