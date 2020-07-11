@@ -7,6 +7,7 @@ import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
 import {ActivatedRoute} from '@angular/router';
 import {of} from 'rxjs';
+import {RustComponent} from './pages/rust/rust.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,6 +16,7 @@ describe('AppComponent', () => {
         AppComponent,
         HomeComponent,
         JavaComponent,
+        RustComponent,
         UnknownComponent,
       ],
       imports: [

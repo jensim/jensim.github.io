@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
 import {RouterModule} from '@angular/router';
+import { RustComponent } from './pages/rust/rust.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {RouterModule} from '@angular/router';
     HomeComponent,
     JavaComponent,
     UnknownComponent,
+    RustComponent,
   ],
   imports: [
     BrowserModule,
