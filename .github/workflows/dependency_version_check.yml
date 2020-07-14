@@ -13,6 +13,6 @@ jobs:
       with:
         ref: 'build'
     - name: Install NCU
-      run: npm-check-updates
+      run: npm install -g npm-check-updates
     - name: Check dependency versions
       run: ncu | grep 'All dependencies match the latest package versions'
