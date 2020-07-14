@@ -1,4 +1,5 @@
 name: Dependency version check
+
 on:
   schedule:
     - cron: '0 2 * * 1,3,5'
@@ -6,13 +7,21 @@ on:
     branches: [ build ]
 
 jobs:
-  build:
+  package-update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: 'build'
-    - name: Install NCU
-      run: npm install -g npm-check-updates
-    - name: Check dependency versions
-      run: ncu | grep 'All dependencies match the latest package versions'
+      - uses: actions/checkout@v2
+        with:
+          ref: 'build'
+      - name: set remote url
+        run: git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+      - name: package-update
+        uses: taichi/actions-package-update@master
+        env:
+          AUTHOR_EMAIL: jens.brimfors@gmail.com
+          AUTHOR_NAME: Jens
+          EXECUTE: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG_LEVEL: debug
+        with:
+          args: -u --packageFile package.json --loglevel verbose
