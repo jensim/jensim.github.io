@@ -5,7 +5,7 @@ on:
     branches: [ build ]
 
 jobs:
-  package-update:
+  build_test_release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
