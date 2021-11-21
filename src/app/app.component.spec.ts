@@ -8,6 +8,8 @@ import {UnknownComponent} from './pages/unknown/unknown.component';
 import {ActivatedRoute} from '@angular/router';
 import {of} from 'rxjs';
 import {RustComponent} from './pages/rust/rust.component';
+import {GolangComponent} from "./pages/golang/golang.component";
+import {BashComponent} from "./pages/bash/bash.component";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -17,6 +19,8 @@ describe('AppComponent', () => {
         HomeComponent,
         JavaComponent,
         RustComponent,
+        BashComponent,
+        GolangComponent,
         UnknownComponent,
       ],
       imports: [

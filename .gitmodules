@@ -1,3 +1,0 @@
-[submodule "dist/jensim"]
-	path = dist/jensim
-	url = git@github.com:jensim/jensim.github.io.git

@@ -12,3 +12,11 @@ body {
 .my-theme {
   @include angular-material-theme($my-theme);
 }
+
+a.hover {
+  background-color: black;
+}
+
+a {
+  color: #9090FF;
+}

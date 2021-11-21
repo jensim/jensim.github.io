@@ -11,6 +11,8 @@ import {JavaComponent} from './pages/java/java.component';
 import {UnknownComponent} from './pages/unknown/unknown.component';
 import {RouterModule} from '@angular/router';
 import { RustComponent } from './pages/rust/rust.component';
+import {GolangComponent} from "./pages/golang/golang.component";
+import {BashComponent} from "./pages/bash/bash.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { RustComponent } from './pages/rust/rust.component';
     JavaComponent,
     UnknownComponent,
     RustComponent,
+    BashComponent,
+    GolangComponent
   ],
   imports: [
     BrowserModule,
