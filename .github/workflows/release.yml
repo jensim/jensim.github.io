@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    branches: [ build ]
+
+jobs:
+  package-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: 'build'
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: 'main'
+          path: dist
+      - name: Clean dist
+        run: rm -rf dist/*
+      - name: Test
+        run: ng test
+      - name: Build
+        run: ng build --prod
+      - name: Commit & Push
+        run: |
+          cd dist
+          git config user.email "3663856+jensim@users.noreply.github.com"
+          git config user.name "GitHub Actions on behalf of Jens Brimfors"
+          git add -a
+          git commit -m 'Updated site from GitHub Actions'
+          git push origin
