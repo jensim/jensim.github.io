@@ -21,8 +21,6 @@ jobs:
         run: rm -rf dist/*
       - name: Install angular CLI
         run: npm install -g @angular/cli
-      - name: Test
-        run: ng test
       - name: Build
         run: ng build --prod
       - name: Commit & Push
