@@ -33,6 +33,6 @@ jobs:
           cd dist
           git config user.email "3663856+jensim@users.noreply.github.com"
           git config user.name "GitHub Actions on behalf of Jens Brimfors"
-          git add -a
+          git add -A
           git commit -m 'Updated site from GitHub Actions'
           git push origin
