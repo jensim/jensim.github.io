@@ -1,9 +1,7 @@
 # Jensim
 
-[![Build Status](https://travis-ci.org/jensim/jensim.github.io.svg?branch=build)](https://travis-ci.org/jensim/jensim.github.io)
+[![Release](https://github.com/jensim/jensim.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/jensim/jensim.github.io/actions/workflows/release.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/jensim/jensim.github.io/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jensim/jensim.github.io?targetFile=package.json)  
-[![dependencies Status](https://david-dm.org/jensim/jensim.github.io/build/status.svg)](https://david-dm.org/jensim/jensim.github.io/build)
-[![devDependencies Status](https://david-dm.org/jensim/jensim.github.io/build/dev-status.svg)](https://david-dm.org/jensim/jensim.github.io/build?type=dev)  
 [![Dependency version check](https://github.com/jensim/jensim.github.io/workflows/Dependency%20version%20check/badge.svg?branch=build)](https://github.com/jensim/jensim.github.io/actions?query=workflow%3A%22Dependency+version+check%22+branch%3Abuild)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
