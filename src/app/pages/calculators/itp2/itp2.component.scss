@@ -1,0 +1,83 @@
+.itp2-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .description {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+  }
+}
+
+.inputs-card, .result-card, .info-card {
+  margin-bottom: 16px;
+}
+
+.input-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  mat-form-field {
+    flex: 1;
+    min-width: 160px;
+  }
+}
+
+.thresholds {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px 16px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  .threshold-value {
+    text-align: right;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 8px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .amount {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .total-row td {
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none;
+    padding-top: 12px;
+    font-size: 1.1rem;
+  }
+}
+
+.info-card {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<div class="itp2-container">
+  <h2>ITP2 Pensionspremie-kalkylator</h2>
+  <p class="description">
+    Beräkna hur mycket din arbetsgivare betalar in till din tjänstepension enligt ITP2-avtalet.
+  </p>
+
+  <mat-card class="inputs-card">
+    <mat-card-content>
+      <div class="input-row">
+        <mat-form-field appearance="outline">
+          <mat-label>År</mat-label>
+          <mat-select [(ngModel)]="selectedYear" [compareWith]="compareYears">
+            <mat-option *ngFor="let y of years" [value]="y">{{ y.year }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Månadslön</mat-label>
+          <input matInput type="number" [(ngModel)]="monthlySalary" min="0" placeholder="0">
+          <span matSuffix>kr/mån</span>
+        </mat-form-field>
+      </div>
+
+      <div class="thresholds">
+        <span class="threshold-label">Gräns 4,5%/30% (7,5 IBB):</span>
+        <span class="threshold-value">{{ threshold | number:'1.0-0' }} kr/mån</span>
+        <span class="threshold-label">Maxlön (30 IBB):</span>
+        <span class="threshold-value">{{ maxCap | number:'1.0-0' }} kr/mån</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="result-card" *ngIf="hasResult">
+    <mat-card-header>
+      <mat-card-title>Beräknad premie</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="result-table">
+        <tbody>
+          <tr>
+            <td>4,5% på lön upp till {{ threshold | number:'1.0-0' }} kr</td>
+            <td class="amount">{{ lowerPartContribution | number:'1.0-0' }} kr</td>
+          </tr>
+          <tr *ngIf="upperPartContribution > 0">
+            <td>30% på lön mellan gräns och max</td>
+            <td class="amount">{{ upperPartContribution | number:'1.0-0' }} kr</td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>Månatlig premie</strong></td>
+            <td class="amount"><strong>{{ totalMonthly | number:'1.0-0' }} kr/mån</strong></td>
+          </tr>
+          <tr>
+            <td>Årlig premie</td>
+            <td class="amount">{{ totalAnnual | number:'1.0-0' }} kr/år</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="info-card">
+    <mat-card-content>
+      <h3>Hur beräknas premien?</h3>
+      <ul>
+        <li>Arbetsgivaren betalar <strong>4,5%</strong> av lönen upp till <strong>7,5 inkomstbasbelopp</strong> ({{ threshold | number:'1.0-0' }} kr/mån för {{ selectedYear.year }}).</li>
+        <li>På lönedelar <strong>över</strong> denna gräns, upp till maxlönen {{ maxCap | number:'1.0-0' }} kr/mån, betalas <strong>30%</strong>.</li>
+        <li>Inkomstbasbelopp {{ selectedYear.year }}: {{ selectedYear.inkomstbasbelopp | number:'1.0-0' }} kr/år.</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>

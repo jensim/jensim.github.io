@@ -13,6 +13,7 @@ import {RouterModule} from '@angular/router';
 import { RustComponent } from './pages/rust/rust.component';
 import {GolangComponent} from "./pages/golang/golang.component";
 import {BashComponent} from "./pages/bash/bash.component";
+import {Itp2Component} from "./pages/calculators/itp2/itp2.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {BashComponent} from "./pages/bash/bash.component";
     UnknownComponent,
     RustComponent,
     BashComponent,
-    GolangComponent
+    GolangComponent,
+    Itp2Component
   ],
   imports: [
     BrowserModule,
